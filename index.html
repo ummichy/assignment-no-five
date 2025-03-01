@@ -35,27 +35,179 @@
 <h4 class="font-bold text-3xl">23</h4>
 </div>
 
-<div class="bg-[#F4F7FF] w-16 h-16 flex items-center justify-center rounded-full">
-  <img src="assets/theme-btn.png" alt="">
-</div>
+  <button class="btn bg-[#F4F7FF] w-16 h-16 rounded-full flex items-center justify-center shadow-2xl hover:bg-slate-400">
+    <img src="assets/theme-btn.png" alt="">
+  </button>
+  
 </div>
 </div>
 </nav>
 </header>
 <!-- cards part -->
 <main>
-<section class="container mx-auto mt-3 h-24">
+<section class="container mx-auto mt-5 h-24 pt-6 ">
 
-<div class="flex gap-3">
+<div class="flex gap-6">
 
-<div class="flex-1 bg-slate-300"></div>
+<!-- left part -->
+<div class="flex-1 bg-white shadow-2xl px-6 rounded-2xl">
+<div class="grid grid-cols-4 gap-3 pt-6 pb-8">
+<div class="bg-[#F4F7FF] flex gap-5 items-center justify-center h-[128px]  rounded-xl">
+<div class="h-16 w-16 bg-white flex justify-center items-center rounded-full">
+  <img src="assets/checkbox.png" alt="">
+</div>
 
-  <div class="w-[366px] text-center">
+<div>
+  <p class="text-[#00303C] font-medium text-base">Task Assigned</p>
+  <h4 class="text-[#00303C] font-bold text-3xl">05</h4>
+
+</div>
+
+</div>
+<div class="col-span-2 flex justify-center items-center gap-6 bg-gradient-to-r from-[#3752FD] via-[#6C7FFA] to-[#9BA8F8] rounded-xl ">
+<img src="assets/board.png" alt="">
+<p class="text-white font-medium text-2xl">Discover Something <br> New Today!</p>
+
+</div>
+
+
+<div class="bg-[#F4F7FF] flex gap-5 items-center justify-center h-[128px]  rounded-xl">
+  <div class="h-16 w-16 bg-white flex justify-center items-center rounded-full">
+    <img src="assets/calender.png" alt="">
+  </div>
+  
+  <div>
+    <p class="text-[#00303C] font-medium text-xl">Wed , </p>
+    <h4 class="text-[#00303C] font-bold text-xl">Jul 28 2025 </h4>
+  
+  </div>
+  
+  </div>
+
+</div>
+<hr class=" border-dashed border text-gray-400">
+<!-- main card part -->
+<div class="grid grid-cols-3 gap-9 py-8">
+  <!-- card 1 -->
+<div class=" px-6 py-6 bg-[#F4F7FF] rounded-xl">
+<button class="btn poppins-font text-base mb-4 border-none text-[#00303C] bg-white">ShopEase</button>
+<h4 class="font-medium text-2xl text-[#00303C] mb-4">Fix Mobile Button Issue </h4>
+<div class="bg-white p-5 rounded-lg mb-4 ">
+  <p class="text-base line-clamp-2 text-slate-500">Debug using Chrome <br> DevTools, check for overlapping elements, and ensure onClick works properly and ensure onClick works properly</p>
+</div>
+<hr class=" border-dashed border text-gray-400 mb-4">
+<div class="flex justify-between items-center">
+<div>
+  <h4 class="text-sm text-[#00303C]">Deadline</h4>
+  <p class="font-medium text-base">21 March 2025</p>
+</div>
+<div>
+  <button class="btn bg-[#3752FD] text-white rounded-lg hover:bg-slate-400 text-base font-medium">Completed</button>
+</div>
+</div>
+</div>
+  <!-- card 2-->
+<div class=" px-6 py-6 bg-[#F4F7FF] rounded-xl">
+<button class="btn poppins-font text-base mb-4 border-none text-[#00303C] bg-white">CloudSync</button>
+<h4 class="font-medium text-2xl text-[#00303C] mb-4">Add Dark Mode
+</h4>
+<div class="bg-white p-5 rounded-lg mb-4 ">
+  <p class="text-base line-clamp-2 text-slate-500">Store the user's preference in localStorage, update CSS variables dynamically, and apply a smooth transition effect.</p>
+</div>
+<hr class=" border-dashed border text-gray-400 mb-4">
+<div class="flex justify-between items-center">
+<div>
+  <h4 class="text-sm text-[#00303C]">Deadline</h4>
+  <p class="font-medium text-base">21 March 2025</p>
+</div>
+<div>
+  <button class="btn bg-[#3752FD] text-white rounded-lg hover:bg-slate-400 text-base font-medium">Completed</button>
+</div>
+</div>
+</div>
+  <!-- card 3 -->
+<div class=" px-6 py-6 bg-[#F4F7FF] rounded-xl">
+<button class="btn poppins-font text-base mb-4 border-none text-[#00303C] bg-white">SwiftPay</button>
+<h4 class="font-medium text-2xl text-[#00303C] mb-4">Optimize  Home page</h4>
+<div class="bg-white p-5 rounded-lg mb-4 ">
+  <p class="text-base line-clamp-2 text-slate-500">Debug using Chrome <br> DevTools, check for overlapping elements, and ensure onClick works properly and ensure onClick works properly</p>
+</div>
+<hr class=" border-dashed border text-gray-400 mb-4">
+<div class="flex justify-between items-center">
+<div>
+  <h4 class="text-sm text-[#00303C]">Deadline</h4>
+  <p class="font-medium text-base">21 March 2025</p>
+</div>
+<div>
+  <button class="btn bg-[#3752FD] text-white rounded-lg hover:bg-slate-400 text-base font-medium">Completed</button>
+</div>
+</div>
+</div>
+  <!-- card 4 -->
+<div class=" px-6 py-6 bg-[#F4F7FF] rounded-xl">
+<button class="btn poppins-font text-base mb-4 border-none text-[#00303C] bg-white">Meta</button>
+<h4 class="font-medium text-2xl text-[#00303C] mb-4">Add new emoji 🤲</h4>
+<div class="bg-white p-5 rounded-lg mb-4 ">
+  <p class="text-base line-clamp-2 text-slate-500">Debug using Chrome <br> DevTools, check for overlapping elements, and ensure onClick works properly and ensure onClick works properly</p>
+</div>
+<hr class=" border-dashed border text-gray-400 mb-4">
+<div class="flex justify-between items-center">
+<div>
+  <h4 class="text-sm text-[#00303C]">Deadline</h4>
+  <p class="font-medium text-base">21 March 2025</p>
+</div>
+<div>
+  <button class="btn bg-[#3752FD] text-white rounded-lg hover:bg-slate-400 text-base font-medium">Completed</button>
+</div>
+</div>
+</div>
+  <!-- card 5 -->
+<div class=" px-6 py-6 bg-[#F4F7FF] rounded-xl">
+<button class="btn poppins-font text-base mb-4 border-none text-[#00303C] bg-white">Google LLC</button>
+<h4 class="font-medium text-2xl text-[#00303C] mb-4">Integrate OpenAI API</h4>
+<div class="bg-white p-5 rounded-lg mb-4 ">
+  <p class="text-base line-clamp-2 text-slate-500">Debug using Chrome <br> DevTools, check for overlapping elements, and ensure onClick works properly and ensure onClick works properly</p>
+</div>
+<hr class=" border-dashed border text-gray-400 mb-4">
+<div class="flex justify-between items-center">
+<div>
+  <h4 class="text-sm text-[#00303C]">Deadline</h4>
+  <p class="font-medium text-base">21 March 2025</p>
+</div>
+<div>
+  <button class="btn bg-[#3752FD] text-white rounded-lg hover:bg-slate-400 text-base font-medium">Completed</button>
+</div>
+</div>
+</div>
+  <!-- card 6-->
+<div class=" px-6 py-6 bg-[#F4F7FF] rounded-xl">
+<button class="btn poppins-font text-base mb-4 border-none text-[#00303C] bg-white">Glassdoor</button>
+<h4 class="font-medium text-2xl text-[#00303C] mb-4">Improve Job searching</h4>
+<div class="bg-white p-5 rounded-lg mb-4 ">
+  <p class="text-base line-clamp-2 text-slate-500">Debug using Chrome <br> DevTools, check for overlapping elements, and ensure onClick works properly and ensure onClick works properly</p>
+</div>
+<hr class=" border-dashed border text-gray-400 mb-4">
+<div class="flex justify-between items-center">
+<div>
+  <h4 class="text-sm text-[#00303C]">Deadline</h4>
+  <p class="font-medium text-base">21 March 2025</p>
+</div>
+<div>
+  <button class="btn bg-[#3752FD] text-white rounded-lg hover:bg-slate-400 text-base font-medium">Completed</button>
+</div>
+</div>
+</div>
+
+</div>
+
+</div>
+<!-- right part -->
+  <div class="w-[366px] text-center bg-white rounded-2xl shadow-2xl">
     <div class="flex gap-4 mt-6 mb-4 items-center justify-center">
       <img src="assets/activity.png" alt="">
       <p class="font-medium text-xl text-[#00303C]">Activity Log</p>
     </div>
-    <button class="btn poppins-font font-medium text-base bg-[#3752FD] text-white rounded-lg px-5 py-3">Clear History</button>
+    <button class="btn poppins-font font-medium text-base bg-[#3752FD] text-white rounded-lg px-5 py-3 hover:bg-slate-400">Clear History</button>
 
 
 
