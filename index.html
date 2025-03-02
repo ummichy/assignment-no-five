@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>document</title>
     <!-- font link -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,23 +19,23 @@
 }
 </style>
 </head>
-<body class="poppins-font">
+<body class="poppins-font py-6">
 <header>
   <!-- nav bar -->
-  <nav class="container mx-auto py-4 px-4 mt-6 h-24 bg-white rounded-2xl shadow-2xl">
+  <nav class="container mx-auto py-4 px-4 h-24 bg-white rounded-2xl drop-shadow-md ">
     <div class="flex justify-between items-center">
       <div class="flex gap-2 items-center">
         <img src="assets/logo.png" alt="logo">
-        <h3 class="text-4xl font-light">Dev<span class="font-bold">Board</span></h3>
+        <h3 class="text-4xl font-light text-[#00303C]">Dev<span class="font-bold">Board</span></h3>
         </div>
 
         <div class="flex gap-10 items-center">
 <div class="flex gap-4 h-16 justify-center items-center bg-[#F4F7FF] w-32 rounded-full">
 <img src="assets/checkbox.png" alt="checkbox">
-<h4 class="font-bold text-3xl">23</h4>
+<h4 id="taskDone" class="font-bold text-3xl">23</h4>
 </div>
 
-  <button class="btn bg-[#F4F7FF] w-16 h-16 rounded-full flex items-center justify-center shadow-2xl hover:bg-slate-400">
+  <button onclick="changeBG()" class="btn bg-[#F4F7FF] w-16 h-16 rounded-full flex items-center justify-center shadow-2xl hover:bg-slate-400">
     <img src="assets/theme-btn.png" alt="">
   </button>
   
@@ -45,41 +45,38 @@
 </header>
 <!-- cards part -->
 <main>
-<section class="container mx-auto mt-5 h-24 pt-6 ">
+<section class="container mx-auto mt-5 pt-6 ">
 
 <div class="grid grid-cols-4 grid-rows-1 gap-6">
 
 <!-- left part -->
-<div class="col-span-3 bg-white shadow-2xl px-6 rounded-2xl">
+<div class="col-span-3 bg-white shadow-xl px-6 rounded-2xl">
 <div class="grid grid-cols-4 gap-3 pt-6 pb-8">
-<div class="bg-[#F4F7FF] flex gap-5 items-center justify-center h-[128px]  rounded-xl">
+<div class="bg-[#F4F7FF] flex gap-5 items-center justify-center h-[128px]  rounded-xl drop-shadow-md">
 <div class="h-16 w-16 bg-white flex justify-center items-center rounded-full">
   <img src="assets/checkbox.png" alt="">
 </div>
 
 <div>
   <p class="text-[#00303C] font-medium text-base">Task Assigned</p>
-  <h4 class="text-[#00303C] font-bold text-3xl">05</h4>
+  <h4 id="taskCount" class="text-[#00303C] font-bold text-3xl">06</h4>
 
 </div>
 
 </div>
-<div id="discover-btn" class="col-span-2 flex justify-center items-center gap-6 bg-gradient-to-r from-[#3752FD] via-[#6C7FFA] to-[#9BA8F8] rounded-xl ">
+<div id="discover-btn" class="col-span-2 flex justify-center items-center gap-6 bg-gradient-to-r from-[#3752FD] via-[#6C7FFA] to-[#9BA8F8] rounded-xl drop-shadow-md">
 <img src="assets/board.png" alt="">
-<p class="text-white font-medium text-2xl">Discover Something New Today!</p>
+<p class="text-white font-medium text-2xl hover:bg-slate-400">Discover Something New Today!</p>
 </div>
 
 
-<div class="bg-[#F4F7FF] flex gap-5 items-center justify-center h-[128px]  rounded-xl">
+<div class="bg-[#F4F7FF] flex gap-2 items-center justify-center h-[128px]  rounded-xl drop-shadow-md">
   <div class="h-16 w-16 bg-white flex justify-center items-center rounded-full">
     <img src="assets/calender.png" alt="">
   </div>
-  
   <div>
-    <p class="text-[#00303C] font-medium text-xl">Wed , </p>
-    <h4 class="text-[#00303C] font-bold text-xl">Jul 28 2025 </h4>
-  
-  </div>
+    <h1 id="currentDate&Time" class="text-[22px] font-bold"></h1>
+     </div>
   
   </div>
 
@@ -88,9 +85,9 @@
 <!-- main card part -->
 <div class="grid grid-cols-3 gap-9 py-8">
   <!-- card 1 -->
-<div class=" px-6 py-6 bg-[#F4F7FF] rounded-xl">
+<div class=" px-6 py-6 bg-[#F4F7FF] rounded-xl drop-shadow-md">
 <button class="btn poppins-font text-base mb-4 border-none text-[#00303C] bg-white">ShopEase</button>
-<h4 class="font-medium text-2xl text-[#00303C] mb-4">Fix Mobile Button Issue </h4>
+<h4 id="title-1" class="font-medium text-2xl text-[#00303C] mb-4">Fix Mobile Button Issue </h4>
 <div class="bg-white p-5 rounded-lg mb-4 ">
   <p class="text-base line-clamp-2 text-slate-500">Debug using Chrome <br> DevTools, check for overlapping elements, and ensure onClick works properly and ensure onClick works properly</p>
 </div>
@@ -101,14 +98,14 @@
   <p class="font-medium text-base">21 March 2025</p>
 </div>
 <div>
-  <button class="btn bg-[#3752FD] text-white rounded-lg hover:bg-slate-400 text-base font-medium">Completed</button>
+  <button class="btn bg-[#3752FD] text-white rounded-lg hover:bg-slate-400 text-base font-medium btn-1 alert ">Completed</button>
 </div>
 </div>
 </div>
   <!-- card 2-->
-<div class=" px-6 py-6 bg-[#F4F7FF] rounded-xl">
+<div class=" px-6 py-6 bg-[#F4F7FF] rounded-xl drop-shadow-md">
 <button class="btn poppins-font text-base mb-4 border-none text-[#00303C] bg-white">CloudSync</button>
-<h4 class="font-medium text-2xl text-[#00303C] mb-4">Add Dark Mode
+<h4 id="title-2" class="font-medium text-2xl text-[#00303C] mb-4">Add Dark Mode
 </h4>
 <div class="bg-white p-5 rounded-lg mb-4 ">
   <p class="text-base line-clamp-2 text-slate-500">Store the user's preference in localStorage, update CSS variables dynamically, and apply a smooth transition effect.</p>
@@ -120,14 +117,14 @@
   <p class="font-medium text-base">21 March 2025</p>
 </div>
 <div>
-  <button class="btn bg-[#3752FD] text-white rounded-lg hover:bg-slate-400 text-base font-medium">Completed</button>
+  <button class="btn bg-[#3752FD] text-white rounded-lg hover:bg-slate-400 text-base font-medium btn-2 alert">Completed</button>
 </div>
 </div>
 </div>
   <!-- card 3 -->
-<div class=" px-6 py-6 bg-[#F4F7FF] rounded-xl">
+<div class=" px-6 py-6 bg-[#F4F7FF] rounded-xl drop-shadow-md">
 <button class="btn poppins-font text-base mb-4 border-none text-[#00303C] bg-white">SwiftPay</button>
-<h4 class="font-medium text-2xl text-[#00303C] mb-4">Optimize  Home page</h4>
+<h4 id="title-3" class="font-medium text-2xl text-[#00303C] mb-4">Optimize  Home page</h4>
 <div class="bg-white p-5 rounded-lg mb-4 ">
   <p class="text-base line-clamp-2 text-slate-500">Debug using Chrome <br> DevTools, check for overlapping elements, and ensure onClick works properly and ensure onClick works properly</p>
 </div>
@@ -138,14 +135,14 @@
   <p class="font-medium text-base">21 March 2025</p>
 </div>
 <div>
-  <button class="btn bg-[#3752FD] text-white rounded-lg hover:bg-slate-400 text-base font-medium">Completed</button>
+  <button class="btn bg-[#3752FD] text-white rounded-lg hover:bg-slate-400 text-base font-medium btn-3 alert ">Completed</button>
 </div>
 </div>
 </div>
   <!-- card 4 -->
-<div class=" px-6 py-6 bg-[#F4F7FF] rounded-xl">
+<div class=" px-6 py-6 bg-[#F4F7FF] rounded-xl drop-shadow-md">
 <button class="btn poppins-font text-base mb-4 border-none text-[#00303C] bg-white">Meta</button>
-<h4 class="font-medium text-2xl text-[#00303C] mb-4">Add new emoji 🤲</h4>
+<h4 id="title-4" class="font-medium text-2xl text-[#00303C] mb-4">Add new emoji 🤲</h4>
 <div class="bg-white p-5 rounded-lg mb-4 ">
   <p class="text-base line-clamp-2 text-slate-500">Debug using Chrome <br> DevTools, check for overlapping elements, and ensure onClick works properly and ensure onClick works properly</p>
 </div>
@@ -156,14 +153,14 @@
   <p class="font-medium text-base">21 March 2025</p>
 </div>
 <div>
-  <button class="btn bg-[#3752FD] text-white rounded-lg hover:bg-slate-400 text-base font-medium">Completed</button>
+  <button class="btn bg-[#3752FD] text-white rounded-lg hover:bg-slate-400 text-base font-medium btn-4 alert">Completed</button>
 </div>
 </div>
 </div>
   <!-- card 5 -->
-<div class=" px-6 py-6 bg-[#F4F7FF] rounded-xl">
+<div class=" px-6 py-6 bg-[#F4F7FF] rounded-xl drop-shadow-md">
 <button class="btn poppins-font text-base mb-4 border-none text-[#00303C] bg-white">Google LLC</button>
-<h4 class="font-medium text-2xl text-[#00303C] mb-4">Integrate OpenAI API</h4>
+<h4 id="title-5" class="font-medium text-2xl text-[#00303C] mb-4">Integrate OpenAI API</h4>
 <div class="bg-white p-5 rounded-lg mb-4 ">
   <p class="text-base line-clamp-2 text-slate-500">Debug using Chrome <br> DevTools, check for overlapping elements, and ensure onClick works properly and ensure onClick works properly</p>
 </div>
@@ -174,14 +171,14 @@
   <p class="font-medium text-base">21 March 2025</p>
 </div>
 <div>
-  <button class="btn bg-[#3752FD] text-white rounded-lg hover:bg-slate-400 text-base font-medium">Completed</button>
+  <button class="btn bg-[#3752FD] text-white rounded-lg hover:bg-slate-400 text-base font-medium btn-5 alert">Completed</button>
 </div>
 </div>
 </div>
   <!-- card 6-->
-<div class=" px-6 py-6 bg-[#F4F7FF] rounded-xl">
-<button class="btn poppins-font text-base mb-4 border-none text-[#00303C] bg-white">Glassdoor</button>
-<h4 class="font-medium text-2xl text-[#00303C] mb-4">Improve Job searching</h4>
+<div class=" px-6 py-6 bg-[#F4F7FF] rounded-xl drop-shadow-md">
+<button class="btn poppins-font text-base mb-4 border-none text-[#00303C] bg-white">Glassdoar</button>
+<h4 id="title-6" class="font-medium text-2xl text-[#00303C] mb-4">Improve Job searching</h4>
 <div class="bg-white p-5 rounded-lg mb-4 ">
   <p class="text-base line-clamp-2 text-slate-500">Debug using Chrome <br> DevTools, check for overlapping elements, and ensure onClick works properly and ensure onClick works properly</p>
 </div>
@@ -192,7 +189,7 @@
   <p class="font-medium text-base">21 March 2025</p>
 </div>
 <div>
-  <button class="btn bg-[#3752FD] text-white rounded-lg hover:bg-slate-400 text-base font-medium">Completed</button>
+  <button class="btn bg-[#3752FD] text-white rounded-lg hover:bg-slate-400 text-base font-medium btn-6 alert">Completed</button>
 </div>
 </div>
 </div>
@@ -201,22 +198,21 @@
 
 </div>
 <!-- right part -->
-  <div class="text-center bg-white rounded-2xl shadow-2xl">
+  <div class="text-center bg-white rounded-2xl shadow-xl">
     <div class="flex gap-4 mt-6 mb-4 items-center justify-center">
       <img src="assets/activity.png" alt="">
       <p class="font-medium text-xl text-[#00303C]">Activity Log</p>
     </div>
-    <button class="btn poppins-font font-medium text-base bg-[#3752FD] text-white rounded-lg px-5 py-3 hover:bg-slate-400">Clear History</button>
+    <button id="clearHistory" class="btn poppins-font font-medium text-base bg-[#3752FD] text-white rounded-lg px-5 py-3 hover:bg-slate-400">Clear History</button>
     <hr class=" border-dashed border text-gray-400 mt-4 mb-8">
+    <div class="notification-full shadow-lg">
 
-
+    </div>
 </div>
 
 </div>
 </section>
 </main>
-
-<footer></footer>
 <script src="js/script.js"></script>
 </body>
 </html>
